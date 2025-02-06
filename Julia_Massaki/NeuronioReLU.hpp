@@ -6,6 +6,7 @@ using namespace std;
 
 class NeuronioReLU : public Neuronio {
 public:
+    NeuronioReLU(const vector<double>& pesos, double bias) : Neuronio(pesos, bias) {}
     double predict(const vector<double>& entradas) {
         if (entradas.size() != pesos.size()) {
             cout << "O número de entradas não corresponde ao número de pesos!\n" << endl;
